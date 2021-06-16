@@ -23,9 +23,49 @@
             <br>
             <input type="password" class="form-control" placeholder="Password">
             <br>
-            <button class="btn btn-success">Enter</button>
+            <button id="login" class="btn btn-success">Enter</button>
         </div>
     </div>
+
+
+    <div id="transaction-area">
+     <div class="row">
+         <div class="col-md-4">
+             <div class="deposit status">
+                <h5>Deposit</h5>
+                <h2>$00</h2>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <div class="withdraw status">
+                <h5>Withdraw</h5>
+                <h2>$00</h2>
+             </div>
+         </div>
+         <div class="col-md-4 ">
+             <div class="balance status">
+                <h5>Balance</h5>
+                <h2>$00</h2>
+             </div>
+         </div>
+     </div>
+        
+
+    </div>
+
+
+    <script>
+
+        const loginBtn = document.getElementById("login");
+        loginBtn.addEventListener("click",function(){
+            const loginArea = document.getElementById("Login-area");
+            loginArea.style.display = "none";
+
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = "block";
+        })
+    </script>
+
     
 </body>
 </html>
